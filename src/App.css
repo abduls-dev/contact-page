@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+	--primary-font: "Poppins", sans-serif;
+	--container-max-width: 1280px;
+	--header-font-size: 3rem; /* Default font size for h1 */
+	--paragraph-font-size: 1rem; /* Default font size for paragraphs */
+	--max-container-width: 90%; /* Responsive width for smaller screens */
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box; /* Include padding and border in total width and height */
+}
+
+body {
+	font-family: var(--primary-font);
+	line-height: 1.6; /* Improved readability */
+	background-color: #f5f5f5; /* Optional background color */
+}
+
+.container {
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	padding: 0 20px; /* Padding for smaller screens */
+}
+
+.main_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end; /* Align children to the end of the container */
+	min-height: calc(
+		100vh - 72px
+	); /* Ensure the container takes full height minus navbar */
+}
+
+/* Responsive Typography */
+h1 {
+	font-size: var(--header-font-size);
+	margin-bottom: 1rem; /* Spacing below the header */
+}
+
+p {
+	font-size: var(--paragraph-font-size);
+	margin-bottom: 1.5rem; /* Spacing below paragraphs */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2rem; /* Smaller font size for h1 on mobile */
+		text-align: center; /* Center text on mobile */
+	}
+
+	p {
+		font-size: 0.9rem; /* Smaller font size for paragraphs on mobile */
+		text-align: center; /* Center text on mobile */
+	}
+
+	.container {
+		padding: 0 15px; /* Less padding for mobile */
+	}
+}
+
+/* Additional Media Queries for Better Compatibility */
+@media (max-width: 480px) {
+	h1 {
+		font-size: 1.5rem; /* Further reduce h1 size for very small screens */
+	}
+
+	p {
+		font-size: 0.8rem; /* Further reduce paragraph size for very small screens */
+	}
+
+	.main_container {
+		padding: 10px; /* Add some padding for small devices */
+	}
+}

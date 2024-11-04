@@ -1,0 +1,21 @@
+.navigation {
+	display: flex;
+	justify-content: space-between; /* Align logo and menu */
+	align-items: center; /* Center items vertically */
+	padding: 16px; /* Add some padding */
+	background-color: #fff; /* Background color for navbar */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for navbar */
+}
+
+.navigation .logo img {
+	height: 50px; /* Set logo height */
+}
+
+ul {
+	list-style: none; /* Remove default list styling */
+	display: flex; /* Flex for horizontal layout */
+}
+
+li {
+	margin: 0 15px; /* Spacing between menu items */
+}
